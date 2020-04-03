@@ -95,6 +95,12 @@ while broke != 1:
 
     print("Estamos na rodada {0}".format(n))
 
+    parar = input("se quiser parar de jogar, por favor digite 'y'")
+
+    if parar is 'y':
+        print("obrigado por jogar")
+        sys.exit()
+
     if fichas is 0:  # se o jogador estiver sem fichas, o jogo acaba aqui :(
         broke = 1
         print("voce esta sem fichas, nao pode apostar mais, obrigado por jogar")
