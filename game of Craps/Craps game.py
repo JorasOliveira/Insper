@@ -12,6 +12,17 @@ def comeOut(money):
     dado2 = random.randrange(1, 6)
     soma = dado1 + dado2
 
+def point(aposta, point, soma):
+    if soma is point:
+        print("voce ganhou a fase point! Agora voltaremos para a Come Out")
+        return aposta * 2
+    if soma is 7:
+        print("voce perdeu a fase point, agora voltaremos para a Come Out")
+        return -aposta
+    else:
+        print("continuaremos na fase point")
+        return aposta
+
 
 def passLine(aposta, soma):
     if soma is 7:
