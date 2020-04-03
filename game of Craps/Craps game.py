@@ -113,7 +113,7 @@ while broke != 1:
 
         if pL is 'y':
             aposta = int(input("quanto quer apostar?"))
-            h = passLine((dado1 + dado2), sum)
+            h = passLine(aposta, soma)
             if h is not None:
                 fichas += h
 
@@ -132,17 +132,25 @@ while broke != 1:
     apostar = input("Quer fazer a aposta field? (y/n)")
     if apostar is 'y':
         aposta = int(input("quanto quer apostar?"))
-        fichas += field(aposta, soma)
+        h = field(aposta, soma)
+        if h is not None:
+            fichas += h
 
     apostar = input("Quer fazer a any craps? (y/n)")
     if apostar is 'y':
         aposta = int(input("quanto quer apostar?"))
-        fichas += anyCraps(aposta, soma)
+        h = anyCraps(aposta, soma)
+        if h is not None:
+            fichas += h
+
 
     apostar = input("Quer fazer a twelve? (y/n)")
     if apostar is 'y':
         aposta = int(input("quanto quer apostar?"))
-        fichas += twelve(aposta, soma)
+        h = twelve(aposta, soma)
+        if h is not None:
+            fichas += h
+
     print("voce tem {0} fichas".format(fichas))
     n += 1
 
