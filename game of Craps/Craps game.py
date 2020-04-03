@@ -97,7 +97,7 @@ while broke != 1:
 
     parar = input("se quiser parar de jogar, por favor digite 'y'")
 
-    if parar is 'y':
+    if parar is 'y' or parar is ' y':
         print("obrigado por jogar")
         sys.exit()
 
@@ -111,7 +111,7 @@ while broke != 1:
         print("primeira fase: Come Out\n")
         pL = input("Quer apostar na aposta pass line? (y/n)")
 
-        if pL is 'y':
+        if pL is 'y' or pL is ' y':
             aposta = int(input("quanto quer apostar?"))
             h = passLine(aposta, soma)
             if h is not None:
@@ -130,14 +130,14 @@ while broke != 1:
             fichas += point(aposta, sum, soma)
 
     apostar = input("Quer fazer a aposta field? (y/n)")
-    if apostar is 'y':
+    if apostar is 'y' or apostar is ' y':
         aposta = int(input("quanto quer apostar?"))
         h = field(aposta, soma)
         if h is not None:
             fichas += h
 
     apostar = input("Quer fazer a any craps? (y/n)")
-    if apostar is 'y':
+    if apostar is 'y' or apostar is ' y':
         aposta = int(input("quanto quer apostar?"))
         h = anyCraps(aposta, soma)
         if h is not None:
@@ -145,7 +145,7 @@ while broke != 1:
 
 
     apostar = input("Quer fazer a twelve? (y/n)")
-    if apostar is 'y':
+    if apostar is 'y' or apostar is ' y':
         aposta = int(input("quanto quer apostar?"))
         h = twelve(aposta, soma)
         if h is not None:
